@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read -p "Enter the directory name under which you want to count files: " dir
+
+if [[ -d "$dir" ]]
+then
+	echo "number of files are $(ls -1 "$dir" |wc -l)"
+else
+	echo "This is not a directory"
+fi
